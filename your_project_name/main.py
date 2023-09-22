@@ -1,6 +1,6 @@
 """Main module of your code
 
-Author(s): Arjan Draisma
+Author(s): Arjan Draisma, Mitja Zdouc
 
 This code is covered under the GNU General Public License v3.0.
 Please refer to the LICENSE located in the root of this repository.
@@ -14,8 +14,8 @@ import sys
 # e.g. import numpy as np
 
 # then by your own code
-from template.module_example import say_hello
-from another_file import another_function
+from your_project_name.module1.funct_say_hello import say_hello
+from your_project_name.module1.funct_another_file import another_function
 
 
 if __name__ == "__main__":

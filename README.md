@@ -34,13 +34,13 @@ your python code.
 2. Create a [virtual environment](#why-do-i-need-an-environment-manager)
    using an environment manager. One convenient program is [Conda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
 3. Assuming that you have (Mini)Conda installed, create a virtual environment:
-   ```create --name your_package_name python=3.11```
-4. Enter the newly created environment with ```conda activate your_package_name```.
-   The prefix of the command prompt should switch to (your_package_name) to show the 
+   ```conda create --name your_project_name python=3.11```
+4. Enter the newly created environment with ```conda activate your_project_name```.
+   The prefix of the command prompt should switch to (your_project_name) to show the 
    change in environment. You can leave the environment again with 
    ```conda deactivate```
 5. Run ```git init``` to initialize the git repository
-6. Edit the `pyproject.toml` file to add metadata on your project
+6. Change `` Edit the `pyproject.toml` file to add metadata on your project
 7. Install your project in the virtual environment using `pip install -e .` This 
    will also install all packages/dependencies you may have listed in your 
    `requirements.txt` file.
@@ -54,6 +54,12 @@ your python code.
 TODO
 
 ### Start coding!
+
+Generally, it is recommended to have the starting point of your code in a file 
+with the name ```main.py``` inside a folder with the name ```your_project_name```.
+In there, the ```main()``` function calls all other functions from separate folders 
+(called modules).
+
 
 Things to consider while you do so:
 - Commit early, commit often
