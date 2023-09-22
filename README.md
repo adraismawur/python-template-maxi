@@ -2,7 +2,7 @@
 
 # python-template-1
 Hi! This is a minimal template for Python projects. The main purpose of the template 
-is to help you to organize your code in a nice way. However, tit is not intended to 
+is to help you to organize your code in a nice way. However, it is not intended to 
 teach you how to write good code. That part is up to you :)
 
 The code included in this repository is in itself a small tutorial on how to structure
