@@ -1,15 +1,10 @@
-"""Contains an example function for the template package
-
-This file, and the folder it is in are totally optional. You can delete them if you
-think you will not be writing a lot of code, and you can just make a few files in the
-root directory instead.
-"""
+"""This is a function for the your_project_name package"""
 
 # it is important to have a descriptive docstring as shown above for each module
 # this makes it easy for someone to decide whether they want to be looking at this file
 
 
-def say_hello(who_calls_hello):
+def say_hello(who_calls_hello: str):
     """Print a hello message to the console
 
     Args:
