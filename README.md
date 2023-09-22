@@ -1,12 +1,12 @@
 ***Replace this readme with a description of your project, and a description of how your code works as soon as possible***
 
 # python-template-1
-Hi! This is a simple template for Python projects. This is intended to force very few things, and help you structure your code in a nice way.
+Hi! This is a minimal template for Python projects. The main purpose of the template 
+is to help you to organize your code in a nice way. However, tit is not intended to 
+teach you how to write good code. That part is up to you :)
 
 The code included in this repository is in itself a small tutorial on how to structure
 your python code.  
-
-This template is not intended to teach you how to write good code. That part is up to you :)
 
 
 ### Table of contents:
@@ -19,23 +19,35 @@ This template is not intended to teach you how to write good code. That part is 
 
 ### Prerequisites
 
+- A package manager (e.g. [MiniConda](https://docs.conda.io/en/latest/miniconda.html))
 - Git
-- [Pre-commit (https://pre-commit.com/)](https://pre-commit.com/)
 
 ### Download the files
 
-1. Click the Code dropdown in the top-right
+1. On this GitHub page, click the Code dropdown button in the top-right
 2. Click Download ZIP
 3. Extract the files somewhere in a new directory
 
 ### Set up the repository (local only)
 
-4. Open a shell in the directory where you have extracted the files
+1. Open a shell in the directory where you have extracted the files
+2. Create a [virtual environment](#why-do-i-need-an-environment-manager)
+   using an environment manager. One convenient program is [Conda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
+3. Assuming that you have (Mini)Conda installed, create a virtual environment:
+   ```create --name your_package_name python=3.11```
+4. Enter the newly created environment with ```conda activate your_package_name```.
+   The prefix of the command prompt should switch to (your_package_name) to show the 
+   change in environment. You can leave the environment again with 
+   ```conda deactivate```
 5. Run ```git init``` to initialize the git repository
-6. Run ```pre-commit install``` to set up pre-commit
-7. Edit the readme file to describe your project
-8. Run ```git add .``` to stage all files
-9. Run ```Git commit -m "initial commit"``` to make your first commit
+6. Edit the `pyproject.toml` file to add metadata on your project
+7. Install your project in the virtual environment using `pip install -e .` This 
+   will also install all packages/dependencies you may have listed in your 
+   `requirements.txt` file.
+8. Run ```pre-commit install``` (installed by the previous command) to set up pre-commit
+9. Edit the readme file to describe your project
+10. Run ```git add .``` to stage all files
+11. Run ```Git commit -m "initial commit"``` to make your first commit
 
 ### Set up a remote
 
@@ -55,7 +67,7 @@ Things to consider while you do so:
 - A readme file
 - A [copyleft](https://choosealicense.com/licenses/gpl-3.0/) license
 - A basic folder structure
-- A requirements yml
+- A requirements.txt with essential packages
 - Pre-commit, using:
   - [Black](https://github.com/psf/black)
 
@@ -64,6 +76,22 @@ Things to consider while you do so:
 ## Why should I use this?
 
 It's difficult to write code. It can be even more difficult to write code that is easy to read and maintain. This template is designed to help you structure your python code in a way that is common for a lot of well-maintained Python projects, while not forcing any of the more difficult aspects of code mainenance on you.  
+
+### Why do I need an environment manager
+
+Almost every Python program you write uses external modules/packages (e.g. Pandas, 
+Numpy). These external programs are under constant development and come in different 
+versions. Different programs may use different versions of the same module/package 
+For example Project_A uses pandas v1.8.0, while Project_B uses pandas v2.1.0). 
+However, having multiple versions of the same program installed on your computer 
+may lead to errors and general confusion. This problem is solved with virtual 
+environments: these represent "folders" in which specific versions of programs can be 
+installed. For example, Project_A would have pandas v1.8.0 installed in its virtual 
+environment, while Project_B would have pandas v2.1.0. Virtual environments can also 
+be easily removed after they are not needed anymore (including all the packages that 
+they contain). This allows to keep your computer (the so-called base environment) clean.
+Several environment managers available. One example is Conda, which is widely used. 
+More information on virtual environments can be found [here](https://realpython.com/python-virtual-environments-a-primer/)
 
 ### Why do I need a readme?
 
@@ -77,11 +105,15 @@ Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see
 
 You do not *need* a license. But if you do not include a license, you are the sole holder of rights to your code (standard copyright), and it is not allowed to contribute and share your code with other people without your permission.
 
-If you want, you can choose a different license on https://choosealicense.com/
+If you want, you can choose a different license on https://choosealicense.com/. A 
+popular and permissive open sources license is the 
+[MIT License](https://opensource.org/license/mit/)
 
 ### Why do I need this folder structure?
 
-You do not need this exact folder structure, but for larger projects it is highly recommended that you subdivide your code into submodules. It takes people very long to read through an entire file to find the specific code they are interested in editing, so collating your code by category into different files and functions is important.
+You do not need this exact folder structure, but for larger projects it is highly 
+recommended that you subdivide your code into submodules (subdirectories). It takes 
+people very long to read through an entire file to find the specific code they are interested in editing, so collating your code by category into different files and functions is important.
 
 If you are working with just a few functions, it is also OK to have a few python files in the root directory without any subdirectories.
 
