@@ -19,7 +19,7 @@ your python code.
 
 ### Prerequisites
 
-- A package manager (e.g. [MiniConda](https://docs.conda.io/en/latest/miniconda.html))
+- A package/environment manager (e.g. [MiniConda](https://docs.conda.io/en/latest/miniconda.html))
 - Git
 
 ### Download the files
@@ -32,31 +32,31 @@ your python code.
 
 1. Open a shell in the directory where you have extracted the files
 2. Create a [virtual environment](#why-do-i-need-an-environment-manager)
-   using an environment manager. One convenient program is [Conda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
+   using an environment manager. One convenient program is [MiniConda](https://docs.conda.io/en/latest/miniconda.html).
 3. Assuming that you have (Mini)Conda installed, create a virtual environment:
-   ```conda create --name your_project_name python=3.11```
-4. Enter the newly created environment with ```conda activate your_project_name```.
+   `conda create --name your_project_name python=3.11`
+4. Enter the newly created environment with `conda activate your_project_name`.
    The prefix of the command prompt should switch to (your_project_name) to show the 
-   change in environment. You can leave the environment again with 
-   ```conda deactivate```
-5. Run ```git init``` to initialize the git repository
-6. Change `` Edit the `pyproject.toml` file to add metadata on your project
+   change in environment. If you need to leave the environment, do 
+   `conda deactivate`
+5. Run `git init` to initialize the git repository
+6. Edit the `pyproject.toml` file to add metadata on your project
 7. Install your project in the virtual environment using `pip install -e .` This 
    will also install all packages/dependencies you may have listed in your 
    `requirements.txt` file.
-8. Run ```pre-commit install``` (installed by the previous command) to set up pre-commit
+8. Run `pre-commit install` (installed by the previous command) to set up pre-commit
 9. Edit the readme file to describe your project
-10. Run ```git add .``` to stage all files
-11. Run ```Git commit -m "initial commit"``` to make your first commit
+10. Run `git add .` to stage all files
+11. Run `Git commit -m "initial commit"` to make your first commit
 
-This process ensures that the history of your repository is clean, and not tied to this github repository in any way.
+This process ensures that the history of your repository is clean, and not tied to this GitHub repository in any way.
 
-### Set up a remote repository (on github)
+### Set up a remote repository (on GitHub)
 
 1. Create a new repository of your own by going through the plus icon in the top right -> new repository. Or [click here](https://github.com/new)
-2. Give your repository a nice name and descriptoin
+2. Give your repository a nice name and description
 3. Under the section "**Initialize this repository with**", do not add anything.
-4. You are now presented with a few steps you can take. You can follow those under the section **…or push an existing repository from the command line**:
+4. You are now presented with a few steps you can take. You can follow those under the section "**…or push an existing repository from the command line**":
 ```bash
 git remote add origin git@github.com:[your_username]/[your_repository].git
 git branch -M main
@@ -66,8 +66,8 @@ git push -u origin main
 ### Start coding!
 
 Generally, it is recommended to have the starting point of your code in a file 
-with the name ```main.py``` inside a folder with the name ```your_project_name```.
-In there, the ```main()``` function calls all other functions from separate folders 
+with the name `main.py` inside a folder with the name `your_project_name`.
+In there, the `main()` function calls all other functions from separate folders 
 (called modules).
 
 
@@ -83,7 +83,7 @@ Things to consider while you do so:
 - A readme file
 - A [copyleft](https://choosealicense.com/licenses/gpl-3.0/) license
 - A basic folder structure
-- A requirements.txt with essential packages
+- A `requirements.txt` with essential packages
 - Pre-commit, using:
   - [Black](https://github.com/psf/black)
 
@@ -110,7 +110,7 @@ environment, while Project_B would have pandas v2.1.0.
 Virtual environments can also 
 be easily removed after they are not needed anymore (including all the packages that 
 they contain). This allows to keep your computer (the so-called base environment) clean.
-Several environment managers available. One example is Conda, which is widely used. 
+Several environment managers are available. One example is Conda (or its lightweight version, MiniConda), which is widely used. 
 More information on virtual environments can be found [here](https://realpython.com/python-virtual-environments-a-primer/)
 
 ### Why do I need a readme?
@@ -119,7 +119,7 @@ A readme is the first point many people will go to to understand your project, a
 
 You can put nearly anything you want in a readme, but generally it is expected that the readme describes what your project is about and how you run your application.
 
-Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see what you can do in README.md files. Or take a look at the README.md file in this repository!
+Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see what you can do in `README.md` files. Or take a look at the `README.md` file in this repository!
 
 ### Why do I need a license?
 
@@ -145,11 +145,11 @@ A requirements file makes it easy for people to automatically install the same d
 
 The pre-commit hooks added to this repository ensure a basic level of code style and prevent some minor issues. Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
 
-### Why do I need black?
+### Why do I need Black?
 
-Any code base that uses Black will have a style that is the same no matter who wrote the code. A consistent code style makes it easier to read, maintain and expand on code.
+[Black](https://black.readthedocs.io/en/stable/) is a code formatter. Any code base that uses it will have a style that is the same no matter who wrote the code. A consistent code style makes it easier to read, maintain and expand on code.
 
-### Why does black use spaces instead of tabs?
+### Why does Black use spaces instead of tabs?
 
 Pretty much all of Black's choices come from adhering to the [PEP8 Style guide](https://peps.python.org/pep-0008/).
 
@@ -157,8 +157,8 @@ Wherever it does not they have made their own decisions and are just applying th
 
 ### Why does black limit lines to 88 characters?
 
-PEP8 recommends 79, but black extends it to reduce average lines of code.
+PEP8 [recommends 79](https://peps.python.org/pep-0008/#maximum-line-length), but black extends it to reduce average lines of code.
 
-Additional context: 79 is a historical choice (small monitors could commonly support about 80 characters) as well as a practical one; Using a small character limit ensures that you can put multiple files next to eachother on common screen sizes, which really helps in comparing files.
+Additional context: 79 is a historical choice (small monitors could commonly support about 80 characters) as well as a practical one; Using a small character limit ensures that you can put multiple files next to each other on common screen sizes, which really helps in comparing files.
 
 
