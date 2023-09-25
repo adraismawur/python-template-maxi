@@ -1,4 +1,4 @@
-***Replace this readme with a description of your project, and a description of how your code works as soon as possible***
+***!!Replace this readme with a description of your project, and a description of how your code works as soon as possible!!***
 
 # python-template-1
 Hi! This is a minimal template for Python projects. The main purpose of the template 
@@ -49,9 +49,19 @@ your python code.
 10. Run ```git add .``` to stage all files
 11. Run ```Git commit -m "initial commit"``` to make your first commit
 
-### Set up a remote
+This process ensures that the history of your repository is clean, and not tied to this github repository in any way.
 
-TODO
+### Set up a remote repository (on github)
+
+1. Create a new repository of your own by going through the plus icon in the top right -> new repository. Or [click here](https://github.com/new)
+2. Give your repository a nice name and descriptoin
+3. Under the section "**Initialize this repository with**", do not add anything.
+4. You are now presented with a few steps you can take. You can follow those under the section **…or push an existing repository from the command line**:
+```bash
+git remote add origin git@github.com:[your_username]/[your_repository].git
+git branch -M main
+git push -u origin main
+```
 
 ### Start coding!
 
@@ -105,7 +115,7 @@ A readme is the first point many people will go to to understand your project, a
 
 You can put nearly anything you want in a readme, but generally it is expected that the readme describes what your project is about and how you run your application.
 
-Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see what you can do in README.md files.
+Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see what you can do in README.md files. Or take a look at the README.md file in this repository!
 
 ### Why do I need a license?
 
