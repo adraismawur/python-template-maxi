@@ -100,10 +100,14 @@ Numpy). These external programs are under constant development and come in diffe
 versions. Different programs may use different versions of the same module/package 
 For example Project_A uses pandas v1.8.0, while Project_B uses pandas v2.1.0). 
 However, having multiple versions of the same program installed on your computer 
-may lead to errors and general confusion. This problem is solved with virtual 
+may lead to errors and general confusion.
+
+This problem is solved with virtual 
 environments: these represent "folders" in which specific versions of programs can be 
 installed. For example, Project_A would have pandas v1.8.0 installed in its virtual 
-environment, while Project_B would have pandas v2.1.0. Virtual environments can also 
+environment, while Project_B would have pandas v2.1.0.
+
+Virtual environments can also 
 be easily removed after they are not needed anymore (including all the packages that 
 they contain). This allows to keep your computer (the so-called base environment) clean.
 Several environment managers available. One example is Conda, which is widely used. 
