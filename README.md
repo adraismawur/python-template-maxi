@@ -12,7 +12,7 @@ The code included in this repository is in itself a small tutorial on how to str
 ### Table of contents:
 
 - [Quick start](#quick-start)
-- [What is included in this repository?](*what-is-included-in-this-repository)
+- [What is included in this repository?](#what-is-included-in-this-repository)
 - [Why should I use this?](#why-should-i-use-this)
 
 ## Quick start:
@@ -24,7 +24,7 @@ The code included in this repository is in itself a small tutorial on how to str
 
 ### Download the files
 
-1. On this GitHub page, click the Code dropdown button in the top-right
+1. On this GitHub page, click the **Code** dropdown button in the top-right
 2. Click Download ZIP
 3. Extract the files somewhere in a new directory
 
@@ -35,7 +35,7 @@ The code included in this repository is in itself a small tutorial on how to str
    One convenient program is [MiniConda](https://docs.conda.io/en/latest/miniconda.html)
 3. Assuming that you have (Mini)Conda installed, create a virtual environment: `conda create --name your_project_name python=3.11`
 4. Enter the newly created environment with `conda activate your_project_name`.
-   The prefix of the command prompt should switch to (your_project_name) to show the change in environment.
+   The prefix of the command prompt should switch to `(your_project_name)` to show the change in environment.
    If you need to leave the environment, do `conda deactivate`
 5. Run `git init` to initialize the git repository
 6. Edit the `pyproject.toml` file to add metadata on your project
@@ -73,24 +73,13 @@ Things to consider while you do so:
 - Have fun!
 
 
-## What is included in this repository?
-
-- A readme file
-- A [copyleft](https://choosealicense.com/licenses/gpl-3.0/) license
-- A basic folder structure
-- A `requirements.txt` with essential packages
-- Pre-commit, using:
-  - [Black](https://github.com/psf/black)
-
-
-
 ## Why should I use this?
 
 It's difficult to write code. 
 It can be even more difficult to write code that is easy to read and maintain. 
-This template is designed to help you structure your python code in a way that is common for a lot of well-maintained Python projects, while not forcing any of the more difficult aspects of code mainenance on you.  
+This template is designed to help you structure your python code in a way that is common for a lot of well-maintained Python projects, while not forcing any of the more difficult aspects of code mainenance on you. 
 
-### Why do I need an environment manager
+### An environment manager
 
 Almost every Python program you write uses external modules/packages (e.g. Pandas, Numpy). 
 These external programs are under constant development and come in different versions. 
@@ -105,18 +94,36 @@ Virtual environments can also be easily removed after they are not needed anymor
 This allows to keep your computer (the so-called base environment) clean.
 Several environment managers are available. 
 One example is Conda (or its lightweight version, MiniConda), which is widely used. 
-More information on virtual environments can be found [here](https://realpython.com/python-virtual-environments-a-primer/)
+More information on virtual environments can be found [here](https://realpython.com/python-virtual-environments-a-primer/).
 
-### Why do I need a readme?
 
-A readme is the first point many people will go to to understand your project, and to figure out how to set up or install your program.
+## What is included in this repository?
 
-You can put nearly anything you want in a readme, but generally it is expected that the readme describes what your project is about and how you run your application.
+- A [README](#a-readme-file) file
+- A (copyleft) [license](#a-license)
+- A basic [folder structure](#folder-structure)
+- A [requirements.txt](#requirementstxt-file) file with essential packages
+- [Pre-commit](#pre-commit), using:
+  - [Black](#black)
+
+### A README file
+
+A README is the first point many people will go to to understand your project, and to figure out how to set up or install your program.
+
+You can put nearly anything you want in a README, but generally it is expected that the README file describes what your project is about and how you run your application.
 
 Refer to [The markdown guide](https://www.markdownguide.org/basic-syntax) to see what you can do in `README.md` files. 
 Or take a look at the `README.md` file in this repository!
 
-### Why do I need a license?
+Some of the elements that you definitely should consider including (if applicable) are:
+
+- The name of your project
+- What does your project do
+- Minimal information on how to run it
+- Small examples showcasing your project's main features
+- Minimal information on how to install the software
+
+### A license
 
 You do not *need* a license. 
 But if you do not include a license, you are the sole holder of rights to your code (standard copyright), and it is not allowed to contribute and share your code with other people without your permission.
@@ -124,36 +131,39 @@ But if you do not include a license, you are the sole holder of rights to your c
 If you want, you can choose a different license on https://choosealicense.com/. 
 A popular and permissive open sources license is the [MIT License](https://opensource.org/license/mit/)
 
-### Why do I need this folder structure?
+### Folder structure
 
 You do not need this exact folder structure, but for larger projects it is highly recommended that you subdivide your code into submodules (subdirectories). 
 It takes people very long to read through an entire file to find the specific code they are interested in editing, so collating your code by category into different files and functions is important.
 
 If you are working with just a few functions, it is also OK to have a few python files in the root directory without any subdirectories.
 
-### Why do I need a requirements file?
+### `requirements.txt` file
 
 A requirements file makes it easy for people to automatically install the same dependencies you used to develop and run your application. 
 You can also fix your requirements to specific version numbers to ensure that people can use the exact same dependencies and re-produce your work.
 
-### Why do I need pre-commit
+### pre-commit
 
-The pre-commit hooks added to this repository ensure a basic level of code style and prevent some minor issues. 
+[pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
+As the name implies, scripts configured in the hook will be run before attempting to commit changes to your (local) repository.
 Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
 
-### Why do I need Black?
+Here, the only script pre-configured for pre-commit is Black.
 
-[Black](https://black.readthedocs.io/en/stable/) is a code formatter. 
+### Black
+
+[Black](https://github.com/psf/black) is a code formatter. 
 Any code base that uses it will have a style that is the same no matter who wrote the code. 
 A consistent code style makes it easier to read, maintain and expand on code.
 
-### Why does Black use spaces instead of tabs?
+#### Why does Black use spaces instead of tabs?
 
 Pretty much all of Black's choices come from adhering to the [PEP8 Style guide](https://peps.python.org/pep-0008/).
 
 Wherever it does not, the authors have made their own decisions and are just applying them consistently.
 
-### Why does black limit lines to 88 characters?
+#### Why does Black limit lines to 88 characters?
 
 PEP8 [recommends 79](https://peps.python.org/pep-0008/#maximum-line-length), but Black extends it to reduce average lines of code.
 
