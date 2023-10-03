@@ -1,4 +1,4 @@
-***!!Replace this readme with a description of your project, and a description of how your code works as soon as possible!!***
+***!!Replace this readme with a description of your project as soon as possible!!***
 
 # python-template-1
 Hi! This is a minimal template for Python projects. 
