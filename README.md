@@ -26,11 +26,7 @@ That part is up to you :)
 
 ### Prerequisites
 
-❗ This template assumes you are familiar with the concepts explained in the [Mini template](https://github.com/adraismawur/python-template-mini)
-
-❗ Furthermore, this template assumes you are somewhat familiar with:
-
-- Pip, the python package manager (included with Python)
+❗ This template assumes you are familiar with the concepts explained in the [Mini template](https://github.com/adraismawur/python-template-mini) and the [Midi template](https://github.com/adraismawur/python-template-midi)  
 
 ### Set up the repository (local only)
 
