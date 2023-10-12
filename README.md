@@ -21,6 +21,7 @@ That part is up to you :)
 - [Quick start](#quick-start)
 - [Why should I use this?](#why-should-i-use-this)
 - [What is included in this repository?](#what-is-included-in-this-repository)
+- [Guide to elements introduced here](#guide-to-elements-introduced-here)
 
 ## Quick start:
 
@@ -32,6 +33,10 @@ That part is up to you :)
 ### Prerequisites
 
 ❗ This template assumes you are familiar with the concepts explained in the [Mini template](https://github.com/adraismawur/python-template-mini) and the [Midi template](https://github.com/adraismawur/python-template-midi)  
+
+- Black
+- Flake8
+- Mypy
 
 ### Set up the repository (local only)
 
@@ -83,8 +88,6 @@ Regardless of our skill level or best intentions, we all make mistakes when codi
 
 This template contains a few automated checks against your code that you can use to prevent some mistakes before they are commited, or when they are pushed to the repository.
 
-### Testing
-
 ## What is included in this repository?
 
 - Everything that is included in the [Mini repository](https://github.com/adraismawur/python-template-mini)
@@ -103,9 +106,15 @@ This template contains a few automated checks against your code that you can use
   - Mypy
 - A GitHub workflow that runs your unit tests every time you push your changes
 
+## Guide to elements introduced here
+
 ### Unit testing
 
-TODO
+A unit test is a small, simple piece of code that tests a unit (usually a specific method) of your code. Unit tests are at their best if they test exactly one condition in exactly one method, but this is usually difficult to achieve.
+
+Unit tests are difficult to write, but when written well can catch instances where a change you have made to your code causes a new issue (regression).
+It can also help you first define the ways in which you want your program to behave before writing code (test-driven development).
+
 
 ### Black
 
@@ -113,7 +122,11 @@ TODO
 Any code base that uses it will have a style that is the same no matter who wrote the code. 
 A consistent code style makes it easier to read, maintain and expand on code.
 
-Style and formatting in coding languages can be a topic of contention. Black has made a couple of choices for you, some of which are explained below.
+
+❗ __It is highly recommended that you find a way to automatically apply black whenever you save your code.__
+
+Style and formatting in coding languages can be a topic of contention.
+Black has made a couple of choices for you, some of which are explained below.
 
 #### Why does Black use spaces instead of tabs?
 
@@ -130,10 +143,26 @@ Additional context: 79 is a historical choice (small monitors could commonly sup
 ### Pre-commit
 
 [pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
+
 As the name implies, scripts configured in the hook will be run before attempting to commit changes to your (local) repository.
 Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
 
+❗ __When any hook in pre-commit detects an issue, your commit will fail.__
+
+❗ __When a pre-commit hook modifies your files on commit, it not add (stage) the modification for your current commit!__  
+❗ __You have to review and add the modification yourself.__
+
+The following hooks are configured in this template:
+
+#### Black
+
+This applies black on any code in your staged changes (modified files you are about to commit) and modifies the code if any issues are found.
+
+#### Flake8
+
+TODO
+
 ### Github workflow
 
-
+TODO
 
