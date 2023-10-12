@@ -11,7 +11,7 @@ Please refer to the LICENSE located in the root of this repository.
 import sys
 
 # then by third party
-# e.g. import numpy as np
+import numpy as np
 
 # then by your own code
 from your_project_name.module1.funct_say_hello import say_hello
@@ -24,3 +24,12 @@ if __name__ == "__main__":
     say_hello(file_name)
 
     another_function()
+
+    small_array = np.zeros((2, 2))
+
+    small_array[0, 0] = 1
+    small_array[0, 1] = 2
+    small_array[1, 0] = 3
+    small_array[1, 1] = 4
+
+    print(small_array)
