@@ -19,10 +19,15 @@ That part is up to you :)
 ### Table of contents:
 
 - [Quick start](#quick-start)
-- [What is included in this repository?](#what-is-included-in-this-repository)
 - [Why should I use this?](#why-should-i-use-this)
+- [What is included in this repository?](#what-is-included-in-this-repository)
 
 ## Quick start:
+
+### Before you begin
+
+❗ Compared to the previous templates, this repository introduces more concepts.  
+❗ Some of the elements introduced here can feel annoying to work with until you get used to them.  
 
 ### Prerequisites
 
@@ -74,7 +79,9 @@ Things to consider while you do so:
 
 ## Why should I use this?
 
-TODO 
+Regardless of our skill level or best intentions, we all make mistakes when coding.
+
+This template contains a few automated checks against your code that you can use to prevent some mistakes before they are commited, or when they are pushed to the repository.
 
 ### Testing
 
@@ -88,27 +95,25 @@ TODO
 - Everything that is included in the [Midi repository](https://github.com/adraismawur/python-template-midi)
   - A pyproject.toml file
   - A requirements.txt file
-- A test folder with an example test
+- A test folder with an example unit test
 - A black configuration in the _pyproject.toml_ file
-- A pre-commit configuration file (.pre-commit-config.yaml)
+- A pre-commit configuration file (.pre-commit-config.yaml), with the following hooks:
+  - Black
+  - Flake8
+  - Mypy
+- A GitHub workflow that runs your unit tests every time you push your changes
 
-### Test folder
+### Unit testing
 
 TODO
-
-### pre-commit
-
-[pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
-As the name implies, scripts configured in the hook will be run before attempting to commit changes to your (local) repository.
-Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
-
-Here, the only script pre-configured for pre-commit is Black.
 
 ### Black
 
 [Black](https://github.com/psf/black) is a code formatter. 
 Any code base that uses it will have a style that is the same no matter who wrote the code. 
 A consistent code style makes it easier to read, maintain and expand on code.
+
+Style and formatting in coding languages can be a topic of contention. Black has made a couple of choices for you, some of which are explained below.
 
 #### Why does Black use spaces instead of tabs?
 
@@ -124,5 +129,11 @@ Additional context: 79 is a historical choice (small monitors could commonly sup
 
 ### Pre-commit
 
-TODO
+[pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
+As the name implies, scripts configured in the hook will be run before attempting to commit changes to your (local) repository.
+Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
+
+### Github workflow
+
+
 
