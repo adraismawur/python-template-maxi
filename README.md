@@ -118,6 +118,7 @@ This template contains a few automated checks against your code that you can use
   - A requirements.txt file
 - A test folder with an example unit test
 - A black configuration in the _pyproject.toml_ file
+- A flake8 configuration in the .flake8 file
 - A pre-commit configuration file (.pre-commit-config.yaml), with the following hooks:
   - Black
   - Flake8
@@ -158,6 +159,15 @@ PEP8 [recommends 79](https://peps.python.org/pep-0008/#maximum-line-length), but
 
 Additional context: 79 is a historical choice (small monitors could commonly support about 80 characters) as well as a practical one; Using a small character limit ensures that you can put multiple files next to each other on common screen sizes, which really helps in comparing files.
 
+### Flake8
+
+Flake8 is a linter.
+Linters check your code against a set of rules such that whenever a rule violation is found, a warning or error is raised.
+
+If you want to run flake8 manually, simply use the command ```flake8```.
+
+How Flake8 judges your code is customizable through a configuration file, also included in this repository. See https://flake8.pycqa.org/en/latest/user/configuration.html for more information.
+
 ### Pre-commit
 
 [pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
@@ -178,7 +188,8 @@ This applies black on any code in your staged changes (modified files you are ab
 
 #### Flake8
 
-TODO
+By default, the flake8 linter pre-commit hook only prevents you from committing code that contains errors, and allows warnings.
+
 
 ### Github workflow
 
