@@ -122,7 +122,6 @@ This template contains a few automated checks against your code that you can use
 - A pre-commit configuration file (.pre-commit-config.yaml), with the following hooks:
   - Black
   - Flake8
-  - Mypy
 - A GitHub workflow that runs your unit tests every time you push your changes
 
 ## Guide to elements introduced here
