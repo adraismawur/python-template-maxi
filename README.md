@@ -34,9 +34,9 @@ That part is up to you :)
 
 ❗ This template assumes you are familiar with the concepts explained in the [Mini template](https://github.com/adraismawur/python-template-mini) and the [Midi template](https://github.com/adraismawur/python-template-midi)  
 
-- Black
-- Flake8
-- Mypy
+For this repository you must install the following tools, which requires you to be familiar with pip:
+- [Black (https://github.com/psf/black)](https://github.com/psf/black)
+- [Flake8 (https://flake8.pycqa.org/en/latest/)](https://flake8.pycqa.org/en/latest/)
 
 ### Set up the repository (local only)
 
@@ -45,17 +45,13 @@ That part is up to you :)
 1. On this GitHub page, click the **Code** dropdown button in the top-right
 2. Click Download ZIP
 3. Extract the files somewhere in a new directory
-4. Open a shell in the directory where you have extracted the files
-5. Edit the readme file to describe your project
-6. Run `git add .` to stage all files
-7. Run `Git commit -m "initial commit"` to make your first commit
 
 ### Set up a remote repository (on GitHub)
 
 ❕Choose this if you want to ensure your code is always saved online, or if you want to share your code.
 
 1. Create a new repository of your own by pressing the green button in the top right named "use this template" -> Create a new repository.
-   Or [click here](https://github.com/new?template_name=python-template-mini&template_owner=adraismawur)
+   Or [click here](https://github.com/new?template_name=python-template-maxi&template_owner=adraismawur)
 2. Give your repository a nice name and description
 3. Choose whether you want the repository to be public (anyone can see your code), or private.
 4. Press "Create repository"
@@ -70,6 +66,13 @@ From here, you can make edits directly to your files, but it is more practical t
 
 Your repository will now appear in the folder you navigated to in step 3
 
+### Setting up pre-commit
+
+1. Open a shell in your repository directory
+2. type pre-commit.
+
+If everything worked correctly, this command should complete with no warnings or errors.
+
 ### Start coding!
 
 Generally, it is recommended to have the starting point of your code in a file with the name `main.py` inside a folder with the name `your_project_name`.
@@ -81,6 +84,21 @@ Things to consider while you do so:
 - You do not have to use the template/ subfolder if you have only a few functions/files
 - Have fun!
 
+### Running your unit tests
+
+All that is needed to execute your unit tests is to run ```pytest``` in your repository directory.
+
+### Committing
+
+1. Run `git add .` to stage all files
+    - You can stage individual files by giving only the paths to those files, the filenames or a pattern, e.g. ```git add your_project_name/**/*.py```
+2. Run `Git commit -m "initial commit"` to make your first commit
+
+If you ran pre-commit before doing this and pre-commit works correctly, you should see two checks (black and flake8) passing with no errors.
+
+If there are issues with your code caught by flake8 or by black, the commit will not complete.  
+You need to make changes and stage them again using ```git add``` to make sure pre-commit sees them.  
+If changes are made by black, these changes are not automatically staged, and you need to add them as well using ```git add```
 
 ## Why should I use this?
 

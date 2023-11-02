@@ -1,5 +1,3 @@
-import sys
-
 from your_project_name.module1.funct_say_hello import say_hello
 
 

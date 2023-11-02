@@ -1,6 +1,6 @@
 # this is where you put all the third-party libraries you want to install
 # e.g. 
-# numpy == 1.18.1
+numpy == 1.18.1
 # dependencies are installed using the command: pip install -r requirements.txt
 
 # recommended libraries
