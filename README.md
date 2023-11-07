@@ -171,7 +171,7 @@ How Flake8 judges your code is customizable through a configuration file, also i
 
 [pre-commit](https://pre-commit.com/), a Git [hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) added to this repository ensures a basic level of code style and prevents some minor issues. 
 
-As the name implies, scripts configured in the hook will be run before attempting to commit changes to your (local) repository.
+As the name implies, plugins configured in the configuration will be run before attempting to commit changes to your (local) repository.
 Since you (hopefully) commit early and often, pre-commit ensures that your code remains nicely stylized and readable.
 
 ❗ __When any hook in pre-commit detects an issue, your commit will fail.__
@@ -179,7 +179,7 @@ Since you (hopefully) commit early and often, pre-commit ensures that your code 
 ❗ __When a pre-commit hook modifies your files on commit, it not add (stage) the modification for your current commit!__  
 ❗ __You have to review and add the modification yourself.__
 
-The following hooks are configured in this template:
+The following plugins are configured in this template:
 
 #### Black
 
@@ -188,6 +188,11 @@ This applies black on any code in your staged changes (modified files you are ab
 #### Flake8
 
 By default, the flake8 linter pre-commit hook only prevents you from committing code that contains errors, and allows warnings.
+
+#### More git hooks
+
+You can find more plugins at [https://pre-commit.com/hooks.html](https://pre-commit.com/hooks.html).
+For more information on how the .pre-commit-config.yaml should look, see [https://pre-commit.com/#plugins](https://pre-commit.com/#plugins).
 
 
 ### Github workflow
